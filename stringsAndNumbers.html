@@ -6,7 +6,7 @@
         <p id="outputText"></p>
 
         <script>
-            var text1 = "4";
+            var text1 = "ten";
             var text2 = "5";
 
             // a way of converting a string to a number.
@@ -15,6 +15,13 @@
 
             document.getElementBy4Id("outputText").innerHTML = num1 + num2;
             //document.getElementById("outputText").innerHTML = text1 + text2;
+
+            // isNaN(stands for is not a number)
+            if(isNaN(num1) || isNaN(num2)){
+                document.getElementById("outputText").innerHTML = "You have not entered a valid number. Please try again.";
+            } else {
+                document.getElementBy4Id("outputText").innerHTML = num1 + num2;
+            }
 
             // a way of converting a string to a number.
             function stringToNumber(text){
